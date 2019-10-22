@@ -1,0 +1,194 @@
+<!-- <html>
+
+        <head>
+                <link
+                    href="https://fonts.googleapis.com/css?family=Noto+Sans&amp;subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,latin-ext,vietnamese"
+                    rel="stylesheet">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+                    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+                <script src="script 55.js"></script>
+                <style>
+                    canvas {
+                        display: block;
+                        margin: 0 auto;
+                    }
+            
+                    h1 {
+                        padding: 20px;
+                        text-align: center;
+                    }
+            
+                    body {
+                        font-family: 'Noto Sans', sans-serif;
+                    }
+                </style>
+            </head>
+
+<body>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <h1>Ծրագրավորում III Ստեփանակերտ</h1>
+            </tr>
+            <tr>
+                <h1>Հայկ Մաճկալյան</h1>
+            </tr>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Գույն</th>
+                <th scope="col">Նկարագրություն</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td scope="row" style="background-color:green;"></td>
+                <td>Կանանչը իմ մոտ խոտն է :Նա մինայն բազմանում է մոխրագույնի վրա: Նա միայն շարժվում է մոխրագույնի  վրայով:
+                    Ամեն քայլ կատարելու ժամանակ նա բազմանում է: 
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td scope="row" style="background-color:orange;"></td>
+                <td>Նարնջագույնը իմ մոտ խոտակերն է: Նա միայն շարժվում է մոխրագույնի վրայով:
+                    Ամեն մեկը երկու անգամ ուտելու ժամանակ նա բազմանում է եւ գումարվում է մեկ:</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td scope="row" style="background-color:red;"></td>
+                <td>Կարմիրը իմ մոտ խոտակերին ուտողն է:Նա միայն շարժվում է մոխրագույնի եւ կանանչի վրայով:
+                    Ամեն մեկը երկու անգամ ուտելու ժամանակ նա բազմանում է:                 
+                    </td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td scope="row" style="background-color:blue;"></td>
+                <td>Կապույտը իմ մոտ ջուրն է :Նա բազմանում եւ քայլում  է մոխրագույնի եւ կանանչի գույների վրայով:
+                        Ամեն քայլ կատարելու ժամանակ նա բազմանում է: </td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td scope="row" style="background-color:magenta;"></td>
+                <td>Վարդագույնը իմ մոտ սովորական անվնաս կենդանի է, որը խմում է ջուր:Նա բազմանում է ամեն ուտելուց:
+                    Նա միայն շարժվում է կանանչի եւ մոխրագույնի վրայով:
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="p5.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script 55.js"></script>
+
+</body>
+
+</html> -->
+<html>
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+
+        div {
+            display: inline-block;
+        }
+
+        h1 {
+            padding: 20px;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <h1>Ծրագրավորում III Ստեփանակերտ</h1>
+            </tr>
+            <tr>
+                <h1>Հայկ Մաճկալյան</h1>
+            </tr>
+            <tr>
+                <td>Եղանակ</td>
+                <td id="weather"></td>
+            </tr>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Գույն</th>
+                <th scope="col">Նկարագրություն</th>
+                <th scope="col">Ծնվել է</th>
+                <th scope="col">Այս պահին կա</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td scope="row" style="background-color:green;"></td>
+                <td>Կանաչը խոտն է, որը բազմանում է N ցիկլը մեկ,մահանում է երբ նրան ուտում է խոտակերը, կամ այրում է
+                    կրակը, կամ երբ նրան սպանում ե տիտանը:Նրա արագությունը և գույնը փոխվում է ըստ եղանակի:</td>
+                <td id="grassCount"></td>
+                <td id="grassLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td scope="row" style="background-color:yellow;"></td>
+                <td>Դեղինը խոտակերն է, որը բազմանում է N հատ խոտ ուտելուց հետո և մահանում է N հատ չուտելուց հետո, կամ
+                    երբ նրան ուտում է գիշատիչը, կամ երբ նրան սպանում ե տիտանը:</td>
+                <td id="grassEaterCount"></td>
+                <td id="grassEaterLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td scope="row" style="background-color:red;"></td>
+                <td>Կարմիրը գիշատիչն է, որը բազմանում է N հատ խոտակեր ուտելուց հետո և մահանում է N հատ չուտելուց հետո,
+                    կամ
+                    երբ նրան ուտում է տերմինատորը, կամ երբ նրան սպանում ե տիտանը:</td>
+                <td id="vagrCount"></td>  
+                <td id="vagrLiveCount"></td>
+
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td scope="row" style="background-color:blue;"></td>
+                <td>Կապույտը իմ մոտ ջուրն է :Նա բազմանում եւ քայլում է մոխրագույնի եւ կանանչի գույների վրայով:
+                    Ամեն քայլ կատարելու ժամանակ նա բազմանում է: </td>
+                    <td id="rainCount"></td>
+                    <td id="rainLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td scope="row" style="background-color:magenta;"></td>
+                <td>Վարդագույնը իմ մոտ սովորական անվնաս կենդանի է, որը խմում է ջուր:Նա բազմանում է ամեն ուտելուց:
+                    Նա միայն շարժվում է կանանչի եւ մոխրագույնի վրայով:
+                </td>
+                <td id="jurcrichCount"></td>
+                <td id="jurcrichLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td scope="row" style="background-color:black;"></td>
+                <td>Սեւ գույնի կերպարը ոչնչացնում է  բոլոր ին առջեւ հայտնվող կենդանիներին:
+                    Նա հզոր կերպար է եւ դժվար է մահանում:
+                </td>
+                <td id="titanCount"></td>
+                <td id="titanLiveCount"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="p5.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

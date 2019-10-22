@@ -1,0 +1,25 @@
+{
+  "name": "final_project",
+  "version": "1.0.0",
+  "main": "class.js",
+  "dependencies": {
+    "express": "^4.17.0",
+    "socket.io": "^2.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaykProgramming/Final_Project-1_0.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HaykProgramming/Final_Project-1_0/issues"
+  },
+  "homepage": "https://github.com/HaykProgramming/Final_Project-1_0#readme",
+  "description": ""
+}
